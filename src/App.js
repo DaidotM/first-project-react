@@ -1,16 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import Footer from './components/footer';
+import Message from './components/message';
+
+import Router from './routes';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-          <p>Hello World!</p>
-      </header>
+      <BrowserRouter>
+        <Header/>
+        <nav>
+          <ul>
+            <li><Link to={`/`}>Home Page</Link></li>
+            <li><Link to={`/about`}>Sobre</Link></li>
+          </ul>
+        </nav>
+
+        <Router />
+
+        <Message message='This is a message from beyond~'/>
+        <Footer/>
+      </BrowserRouter>
     </div>
   );
 }
