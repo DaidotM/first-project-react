@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import "./style.css";
 
 export default class Header extends Component{
   render(){
     return(
-      <header>
-        <h1>Meu primeiro projeto React :D</h1>
+      <header id="main-header">
+        Meu primeiro projeto React :D
       </header>
     )
   }

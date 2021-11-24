@@ -1,0 +1,11 @@
+header#main-header{
+  background: linear-gradient(90deg, #0388e5 0, #07bdf4);
+  width: 100%;
+  height: 60px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
