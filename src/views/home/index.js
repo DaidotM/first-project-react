@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
   state = {
@@ -32,6 +33,8 @@ export default class Home extends Component {
                 Description {product.description} <br />
                 Price {product.price} <br />
                 Quantity {product.quantity} <br />
+
+                <Link to={`/detail-product/${product.id}`}>Detalhes do produto.</Link>
               </p>
             </article>
           )
