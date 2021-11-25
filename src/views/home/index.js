@@ -20,9 +20,9 @@ export default class Home extends Component {
     return(
       <div>
         <h1>Home</h1>
-        <h2>Seja Bem-vindo!!</h2>
+        <h2>Welcome!</h2>
 
-        <h3> Quantidade de produtos {products.length}</h3>
+        <h3> Quantity of products {products.length}</h3>
 
         <div>
         {
@@ -31,7 +31,7 @@ export default class Home extends Component {
               <p>
                 ID {product.id} <br />
                 Description {product.description} <br />
-                Price {product.price} <br />
+                Price R$ {product.price} <br />
                 Quantity {product.quantity} <br />
 
                 <Link to={`/detail-product/${product.id}`}>Detalhes do produto.</Link>

@@ -19,7 +19,7 @@ export default function DetailProduct() {
         <p>
           ID { product?.id } <br />
           Description { product?.description } <br />
-          Price { product?.price } <br />
+          Price R$ { product?.price } <br />
           Quantity { product?.quantity } <br />
 
         </p>

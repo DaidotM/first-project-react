@@ -13,7 +13,8 @@ function App() {
         <nav id='main-nav'>
           <ul>
             <li><Link to={`/`}>Home Page</Link></li>
-            <li><Link to={`/about`}>Sobre</Link></li>
+            <li><Link to={`/register-product`}>Register Product</Link></li>
+            <li><Link to={`/about`}>About</Link></li>
           </ul>
         </nav>
 
