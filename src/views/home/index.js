@@ -35,6 +35,8 @@ export default class Home extends Component {
                 Quantity {product.quantity} <br />
 
                 <Link to={`/detail-product/${product.id}`}>Detalhes do produto.</Link>
+                <br />
+                <Link to={`/delete-product/${product.id}`}>Deletar produto.</Link>
               </p>
             </article>
           )
