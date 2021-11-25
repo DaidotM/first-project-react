@@ -1,32 +1,28 @@
-import React, { Component } from 'react';
+import React, { useState }from 'react';
 import api from '../../services/api';
+import { useParams } from 'react-router-dom';
 
-export default class DetailProduct extends Component  {
-  state = {
-      product: {}
-  };
+export default function DetailProduct() {
 
-  async componentDidMount(){
+  const { id } = useParams();
 
-    const { id } = this.props.match.params;
-
-    const response = await api.get(`/details-product.php?id=${id}`);
-
-    this.setState({ product: response.data });
-  }
-
-  render(){
-    const { product } = this.state;
+    const [product, setProduct] = useState();
+      api
+        .get(`/details-product.php?id=${ id }`)
+        .then((response) => setProduct(response.data))
+        .catch((err) => {
+          console.error("ops! ocorreu um erro" + err);
+        });
 
     return (
       <div>
         <p>
-          ID {product.id} <br />
-          Description {product.description} <br />
-          Price {product.price} <br />
-          Quantity {product.quantity} <br />
+          ID { product?.id } <br />
+          Description { product?.description } <br />
+          Price { product?.price } <br />
+          Quantity { product?.quantity } <br />
+
         </p>
       </div>
     );
-  }
 }
