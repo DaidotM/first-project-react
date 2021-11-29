@@ -1,6 +1,6 @@
 import React, { useState }from 'react';
 import api from '../../services/api';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export default function DeleteProduct() {
 

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
 
+import './style.css';
+
 export default class Home extends Component {
   state = {
     products: []
@@ -18,7 +20,7 @@ export default class Home extends Component {
   render(){
     const { products } = this.state;
     return(
-      <div>
+      <div className="products">
         <h1>Home</h1>
         <h2>Welcome!</h2>
 

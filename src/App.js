@@ -1,6 +1,7 @@
 import './App.css';
 
 import Header from './components/header';
+import Footer from './components/footer';
 
 import Router from './routes';
 import { BrowserRouter, Link } from 'react-router-dom';
@@ -17,6 +18,7 @@ function App() {
             <li><Link to={`/about`}>About</Link></li>
           </ul>
         </nav>
+        <Footer />
 
         <Router />
 
